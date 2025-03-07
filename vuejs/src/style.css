@@ -1,0 +1,320 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.badge {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.mr-2 {
+  margin-right: 10px;
+}
+
+.ml-4 {
+  margin-left: 20px;
+}
+.folder button{
+  background-color: #f9f9f9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* border: 1px solid #ccc; */
+  color: #333;
+  width: 100%;
+}
+
+.folder button:hover {
+  color: #4753ff;
+  background-color: rgb(218, 228, 247);
+
+  & svg > polygon {
+    fill: #4753ff !important;
+  }
+
+  & .badge {
+    background-color: #4753ff;
+    color: white;
+  }
+}
+
+.folder button:hover svg > polygon {
+  fill: #4753ff !important;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 10px
+}
+
+.divider {
+  border: 1px solid #f0efef;
+  margin: 20px 0px;
+}
+
+.left-side {
+  min-height: 500px;
+  padding: 0px 20px;
+}
+
+.btn-import-document {
+  background-color: #3662f4;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* margin-top: 20px; */
+  border: none;
+}
+
+.storage {
+  margin: 10px 0;
+}
+
+.storage-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aaaaaa;
+  margin: 20px 0px;
+}
+
+.storage-title a {
+  color: #aaaaaa;
+}
+
+.storage-used {
+  width: 100%;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #ccc;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.storage-fill {
+  height: 100%;
+  background-color: #3662f4;
+  border-radius: 50px;
+  transition: width 0.5s ease;
+}
+
+.percent-used {
+  color: #3662f4;
+  font-weight: bold;
+}
+
+.box-search {
+  position: relative;
+}
+
+#input-search {
+  width: 100%;
+  border: 1px solid #f0efef; 
+  height: 36px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+#input-search:focus {
+  outline: none;
+}
+
+#input-search::before {
+  content: url('https://img.icons8.com/material-outlined/24/000000/search--v1.png');
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.icon-input-search {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  opacity: 0.1;
+}
+
+.folder-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+.folder-title a {
+  color: #aaaaaa;
+}
+
+.subfolder-active {
+  background-color: rgb(218, 228, 247) !important;
+
+  color: #4753ff ;
+  border-radius: 5px;
+
+  & svg > polygon {
+    fill: #4753ff !important;
+  }
+
+  & .badge {
+    background-color: #4753ff;
+    color: white;
+  }
+}
+
+.right-side {
+  /* border: 1px solid blue; */
+  min-height: 500px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: #f9f9f9;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+
+
